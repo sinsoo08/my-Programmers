@@ -1,0 +1,14 @@
+class Solution {
+    public int solution(int n) {
+        return n / gcd(n, 6);
+    }
+
+    public int gcd(int a, int b) {
+        while (b != 0) {
+            int temp = a % b;
+            a = b;
+            b = temp;
+        }
+        return a;
+    }
+}
